@@ -11,6 +11,9 @@ class ResultsViewController: UIViewController {
   
   var responses: [Answer]
   
+  @IBOutlet var resultAnswerLabel: UILabel!
+  @IBOutlet var resultDefinitionLabel: UILabel!
+  
   init?(coder: NSCoder, responses: [Answer]) {
     self.responses = responses
     super.init(coder: coder)
@@ -23,6 +26,8 @@ class ResultsViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    navigationItem.hidesBackButton = true
+    
     calculatePersonalityResult()
   }
   
@@ -30,6 +35,16 @@ class ResultsViewController: UIViewController {
     let frequencyOfAnswers = responses.reduce(into: [:]) { (counts, answer) in
       counts[answer.type, default: 0] += 1
     }
+    
+//    let frequentAnswersSorted = frequencyOfAnswers.sorted(by: { (pair1, pair2) in
+//      return pair1.value > pair2.value
+//    })
+//    let mostCommonAnswer = frequentAnswersSorted.first!.key
+    
+    let mostCommonAnswer = frequencyOfAnswers.sorted { $0.1 > $1.1 }.first!.key
+    
+    resultAnswerLabel.text = "You are a \(mostCommonAnswer.rawValue)!"
+    resultDefinitionLabel.text = mostCommonAnswer.definition
   }
   
   /*

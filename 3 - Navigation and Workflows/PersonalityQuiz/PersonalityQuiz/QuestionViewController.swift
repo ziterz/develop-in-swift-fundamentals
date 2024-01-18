@@ -32,7 +32,7 @@ class QuestionViewController: UIViewController {
     ),
     Question(
       text: "How much do you enjoy car rides?",
-      type: .multiple,
+      type: .ranged,
       answers: [
         Answer(text: "I dislike them", type: .cat),
         Answer(text: "I get a litle nervous", type: .rabbit),
