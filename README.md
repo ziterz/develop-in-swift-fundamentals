@@ -8,3 +8,7 @@ In this course, students build fundamental iOS app development skills. They’ll
 
 
 Guided app projects help students build an app in Xcode with step-by-step instructions and illustrations. Some projects include starter code, allowing students to focus on key concepts to accelerate learning. They'll also learn key programming concepts in Xcode Playgrounds—interactive coding environments that let them experiment with Swift code to see results immediately.
+
+# Certificate
+
+![certificate](https://github.com/ziterz/develop-in-swift-fundamentals/assets/16526236/5db494de-a891-4ddf-8541-85d636baf5b8)
